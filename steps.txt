@@ -1,0 +1,37 @@
+terraform init:
+
+terraform plan:
+
+terraform validate:
+
+backend : keeping terraform state file in a common location which is accessible to other team members
+
+
+terraform apply -auto-approve
+
+terraform destory
+
+
+passing input variables:
+
+variable block , use default clause and set 
+
+variable "test_var" {
+default = "somevalue"
+}
+
+terraform plan
+or
+
+export TF_VAR_test_var=somevalue
+terraform plan
+
+or
+
+terraform plan -var 'test_var=somevalue'
+
+
+or dev.tfvar 
+test_var = "somevalue"
+
+terraform plan -var-file=variable.tfvar
